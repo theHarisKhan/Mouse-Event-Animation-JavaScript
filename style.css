@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.content-body{
+    position: relative;
+    overflow: hidden;
+    background-image: url(imgs/blue-sea.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.content-body .box{
+    position: relative;
+    height: 100%;
+    width: 33.33%;
+    display: flex;
+    align-items: flex-end;
+    padding-inline: 20px;
+    padding-block: 20px 100px;
+    cursor: pointer;
+    background: linear-gradient(0deg, #000, transparent);
+}
+
+.content-body .box:not(:last-child){
+    border-right: 1px solid #fff;
+}
+
+.content-body .box h2,p{
+    color: #fff;
+    margin-bottom: 15px;
+    transform: translateY(50px);
+    transition: 0.3s all;
+}
+
+.content-body .box h2{
+    text-transform: uppercase;
+}
+
+.content-body .CTA-btn{
+    padding: 10px 20px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+    transform: translateY(-60px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all;
+}
+
+.content-body .CTA-btn:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.content-body .box:hover h2,
+.content-body .box:hover p{
+    transform: translateY(0);
+}
+
+.content-body .box:hover .CTA-btn{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    transform: translateY(0px);
+}

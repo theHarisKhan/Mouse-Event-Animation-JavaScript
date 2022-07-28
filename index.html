@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Listener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="content-body">
+            <div class="box" onmouseover="setImg('flame.jpg')">
+                <div class="box-content">
+                    <h2>Britanica Kolas</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, delectus.</p>
+                    <button class="CTA-btn">read more</button>
+                </div>
+            </div>
+            <div class="box" onmouseover="setImg('NYC-Traffic.jpg')">
+                <div class="box-content">
+                    <h2>Los Angeles</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, delectus.</p>
+                    <button class="CTA-btn">read more</button>
+                </div>
+            </div>
+            <div class="box" onmouseover="setImg('the-boat.jpg')">
+                <div class="box-content">
+                    <h2>Fire Island</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, delectus.</p>
+                    <button class="CTA-btn">read more</button>
+                </div>
+            </div>
+            <div class="box" onmouseover="setImg('old-honda.jpg')">
+                <div class="box-content">
+                    <h2>Kolawamp Island</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, delectus.</p>
+                    <button class="CTA-btn">read more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const setImg = (url) => {
+            document.querySelector('.content-body').style.backgroundImage = `url(imgs/${url})`;
+        }
+    </script>
+    
+</body>
+</html>
